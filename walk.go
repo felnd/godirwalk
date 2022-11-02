@@ -3,6 +3,7 @@ package godirwalk
 import (
 	"errors"
 	"fmt"
+	"io"
 	"os"
 	"path/filepath"
 )
