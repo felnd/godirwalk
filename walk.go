@@ -337,7 +337,7 @@ func walk(osPathname string, dirent *Dirent, options *Options) error {
 		}
 		err = walk(osChildname, deChild, options)
 		debug("osChildname: %q; error: %v\n", osChildname, err)
-		if err == nil || err == SkipThis {
+		if err == nil || err == SkipThis || err == io.EOF{
 			continue
 		}
 		if err != filepath.SkipDir {
